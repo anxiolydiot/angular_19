@@ -18,6 +18,12 @@ app.get('/', function(req, res) {
 
 app.get('/find', function(req, res) {
 /*Find all plans from db*/ 
+plans.find({}, function (err,docs){
+  if (err){ 
+    throw (err);
+  }
+  console.log(docs);
+});
 });
 
 app.post('/grab', function(req, res) {
